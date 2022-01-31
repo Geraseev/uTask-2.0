@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-do</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ad51b1797c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <h1>uTask 2.0</h1>
+      <img src="BlueLogo 1.png" id="unect">
+    </header>
+    <section class="holder">
+      <div class="add">
+
+        <input id="tarefa" type="text" class="input" placeholder="Adicionar Tarefa..."/>
+        <button id="addButton" onClick = "add()"><i class="fas fa-plus-square"></i></button>
+      </div>
+    </section>
+    <section class="set">
+      <div class="card">
+        <h2>To Do</h2>
+        <ul id="todo">
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Doing</h2>
+        <ul id="doing">
+        </ul>
+      </div>
+      <div class="card3">
+        <h2>Done</h2>
+        <ul id="done">
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <button onclick="showModal()" id="config">
+          <i class="fab fa-whmcs"></i>
+      </button>
+      <div class="modal" id="modal">
+          <div class="modal-content">
+              <span onclick="hiddenModal()">&times;</span>
+              <h2>Configuração</h2>
+              <h3>Dark Mode</h3>
+              <button id="darkmodeOff">
+                  <i class="fas fa-toggle-off"></i>
+                  <!-- Botão não tem função -->
+              </button>
+              <h4>Plano de Fundo</h4>
+              <input id="planF" type="text" placeholder="adicionar imagem">
+              <button id="aplicar" onclick="addImg()">Aplicar</button>
+              <!-- Botão de aplicar tem função, mas não faz a adição de imagem-->
+              <button id="limpar" onclick="Limpar()">Limpar</button>
+
+          </div>
+  </section>
+    <script src="main.js"></script>
+  </body>
+</html>

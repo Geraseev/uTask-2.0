@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+    height: 100%;
+    background: #FCFCFC;
+  }
+  
+  button{
+    font-size: 100%;
+    border: 0;
+    padding: 0;
+    background: rgba(0,0,0,0);
+  }
+  
+  input, button{
+    outline: 0;
+  }
+  
+  button:hover{
+    cursor: pointer;
+    color:rgb(102, 100, 102);
+  }
+  
+  .holder{
+    padding: 0 20px;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:0;
+    margin-top: 20px;
+    background: transparent;
+}
+  
+  header h1{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: -0.017em;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 72px;
+    color: #0C58D3;
+    border-bottom: 1px solid #226ED8;
+  }
+  
+  .add{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .set{
+    display: flex;
+    margin: 50px auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+  }
+  
+  .card h2{
+    font-family: 'Roboto',sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #D9D9D9;
+    text-align: center;
+    color: #141414;
+  }
+  
+  .card li{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto',sans-serif;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    list-style: none;
+  }
+
+  .card3{
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+  }
+  
+  .card3 h2{
+    font-family: 'Roboto',sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #D9D9D9;
+    text-align: center;
+    color: #141414;
+  }
+  
+  .card3 li{
+    font-family: 'Roboto',sans-serif;
+    align-items: center;
+    text-decoration: line-through;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    list-style: none;
+  }
+  
+  .input{
+    border: 1px solid #e6ecf0;
+    height: 40px;
+    padding: 0 10px;
+    width: 350px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border-radius: 14px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    background-color: #FFFFFF;
+
+    font-family: 'Ubuntu',sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .fa-plus-square{
+    font-size: 40px;
+  }
+
+/* Botões dos cards*/
+#next{
+    color: #2a6cc4;
+    position: absolute;
+    padding: none;
+    left: 300px;
+    top: 40;
+}
+
+#next:hover{
+    color:rgb(102, 100, 102);
+}
+
+#doneBtn{
+    color: green;
+    position: absolute;
+    padding: none;
+    left: 750px;
+    top: 40;
+}
+
+#doneBtn:hover{
+    color:rgb(102, 100, 102);
+}
+
+#redo{
+    color: black;
+    position: absolute;
+    padding: none;
+    left: 1200px;
+    margin-top: -10px;
+}
+
+#redo:hover{
+    color:rgb(102, 100, 102);
+}
+
+#del1{
+  color: red;
+  position: absolute;
+  padding: none;
+  left: 330px;
+  top: 40;
+}
+
+#del1:hover{
+    color:rgb(102, 100, 102);
+}
+
+#del2{
+  color: red;
+  position: absolute;
+  padding: none;
+  left: 780px;
+  top: 40;
+}
+
+#del2:hover{
+  color:rgb(102, 100, 102);
+}
+
+#del3{
+  color: red;
+  position: absolute;
+  padding: none;
+  left: 1230px;
+  margin-top: -10px;
+}
+
+#del3:hover{
+  color:rgb(102, 100, 102);
+}
+
+/*modal*/
+
+#config{
+  position: absolute;
+  color: #0C58D3;
+  left: 80%;
+  top:30px;
+  background-color: #FCFCFC;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 40px;
+}
+
+#config:hover{
+  color: #10448b;
+  background-color: #FCFCFC;
+}
+
+.modal{
+  position: fixed;
+  padding: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.5);
+  transform: scale(1.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.modal-content{
+  background-color: #ffffff;
+  padding: 16px 24px;
+  width: 514px;
+  height: 360px;
+  border-radius: 10px;
+}
+
+h2{
+  font-family: 'Roboto',sans-serif;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+span{
+  float: right;
+  width: 24px;
+  cursor: pointer;
+}
+
+.show-modal{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+}
+
+h3{
+  margin-top: 40px;
+  font-family: 'Roboto',sans-serif;
+  align-items: center;
+  text-align: left;
+}
+
+.modal-content button{
+  position: relative;
+  color: black;
+  left: 90%;
+  background-color: #ffffff;
+  top:-25px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+
+h4{
+  margin-top: 30px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 18px;
+  align-items: center;
+  text-align: left;
+}
+
+#planF{
+  width: 371px;
+  height: 31px;
+  margin-top: 30px;
+  font-family: 'Ubuntu',sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: rgba(0,0,0,0.7);
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+
+/*Botões do modal*/
+
+#aplicar{
+  position: relative;
+  color: #ffffff;
+  left: 0%;
+  background-color: #226ED8;
+  top:65px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-style: 'Ubuntu';
+  width: 100px;
+  border-radius: 5px;
+
+}
+
+#aplicar:hover{
+  background-color: #0C58D3;
+  color: #ffffff;
+}
+
+#limpar{
+  position: relative;
+  color: #3a3838;
+  left: 0%;
+  background-color: #aab2be;
+  top:65px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-style: 'Ubuntu';
+  width: 100px;
+  border-radius: 5px;
+
+}
+
+#limpar:hover{
+  background-color: #747477;
+  color: #ffffff;
+}
+
+
+
+
+/* head*/
+
+#uTask{
+  position: absolute;
+  width: 526px;
+  height: 70px;
+  left: 550px;
+  top: 20px;
+
+  font-family: 'Ubuntu',sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 83px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.017em;
+
+  color: #0C58D3;
+}
+#uTask line{
+  position: absolute;
+  width: 268px;
+  height: 0px;
+  left: 20px;
+  top: 80px;
+
+  border: 1px solid #226ED8;
+}
+
+#unect{
+  position: absolute;
+  left: 15%;
+  top: 40px;
+}
+
+
+#config:hover{
+    color: #10448b;
+    background-color: #FCFCFC;
+}
+
+.modal{
+    position: fixed;
+    padding: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.modal-content{
+    background-color: #ffffff;
+    padding: 16px 24px;
+    width: 514px;
+    height: 360px;
+    border-radius: 10px;
+}
+
+h2{
+    font-family: 'Roboto',sans-serif;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+span{
+    float: right;
+    width: 24px;
+    cursor: pointer;
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+h3{
+    margin-top: 40px;
+    font-family: 'Roboto',sans-serif;
+    align-items: center;
+    text-align: left;
+}
+
+.modal-content button{
+    position: relative;
+    color: black;
+    left: 90%;
+    background-color: #ffffff;
+    top:-25px;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
+.darkmode{
+    background: #232323;
+}
+
+h4{
+    margin-top: 30px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    align-items: center;
+    text-align: left;
+}
+
+#planF{
+    width: 371px;
+    height: 31px;
+    margin-top: 30px;
+    font-family: 'Ubuntu',sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: rgba(0,0,0,0.7);
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+
+#aplicar{
+    position: relative;
+    color: #ffffff;
+    left: 0%;
+    background-color: #226ED8;
+    top:65px;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-style: 'Ubuntu';
+    width: 100px;
+    border-radius: 5px;
+
+}
+
+#aplicar:hover{
+    background-color: #0C58D3;
+    color: #ffffff;
+}
+
+#button {
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+}
+
+#del{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#del:hover{
+    background-color: thistle;
+}
+
+#seta{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#seta:hover{
+    background-color: thistle;
+}
